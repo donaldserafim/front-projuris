@@ -1,5 +1,5 @@
 export interface Pokemon {
-  count: number,
-  next: string,
-  results: []
+  count: number;
+  next: string;
+  results: [];
 }

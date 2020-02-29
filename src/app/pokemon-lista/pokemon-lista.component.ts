@@ -33,7 +33,6 @@ export class PokemonListaComponent implements OnInit {
 
   onScrollDown() {
     if (this.next != this.nextPrevios) {
-      console.log(this.next)
       this.service.listPokemons(this.next).subscribe(
         data => {
           this.next = data.next;
@@ -54,13 +53,13 @@ export class PokemonListaComponent implements OnInit {
   }
 
   favorite(id) {
-    if (this.checkFavorite(id)){
+    if (this.checkFavorite(id)) {
       localStorage.removeItem(id);
-    }else{
+    } else {
       localStorage.setItem(id, "true");
     }
 
-      
+
   }
 
   checkFavorite(id) {
@@ -68,9 +67,6 @@ export class PokemonListaComponent implements OnInit {
       return true;
     }
     return false;
-  }
-
-  onUp() {
   }
 
 }
