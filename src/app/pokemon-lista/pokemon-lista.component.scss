@@ -1,0 +1,32 @@
+.search-results{
+    display: flex;
+    align-items: center;
+    padding: 15px 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card{
+    max-width: 320px;
+    min-width: 320px;
+    box-shadow: 0 0 0 0.2rem rgba(24, 27, 31, 0.3);
+    margin: 15px;
+}
+
+.card-title{
+    font-weight: bold;
+}
+
+.card .row{
+    align-items: center;
+}
+
+.btn-danger{
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.3);
+    font-weight: bold;
+}
+
+.btn-light{
+    box-shadow: 0 0 0 0.2rem rgba(24, 27, 31, 0.3);
+    font-weight: bold;
+}

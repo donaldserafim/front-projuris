@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="search-results" infinite-scroll [infiniteScrollDistance]="scrollDistance"
+    [infiniteScrollUpDistance]="scrollUpDistance" [infiniteScrollThrottle]="throttle" (scrolled)="onScrollDown()"
+    (scrolledUp)="onUp()">
+    <div *ngFor="let pokemon of pokemons" class="card mb-3">
+      <div class="row no-gutters">
+        <div class="col-md-6">
+          <img [src]="pokemon.image" class="card-img" alt="...">
+        </div>
+        <div class="col-md-6">
+          <div class="card-body">
+            <h5 class="card-title">{{pokemon.name}}</h5>
+            <p class="card-text"><button [ngClass]="checkFavorite(pokemon.id)?'btn btn-danger':'btn btn-light'"
+                (click)="favorite(pokemon.id)">{{checkFavorite(pokemon.id)?'FAVORITO':'FAVORITAR'}}</button></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
